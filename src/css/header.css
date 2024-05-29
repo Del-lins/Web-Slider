@@ -1,0 +1,25 @@
+header {
+  width: 1140px;
+  max-width: 80%;
+  margin: auto;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+}
+
+header nav ul li a {
+  margin-right: 40px;
+  padding: 5px 10px;
+  transition: 0.5s;
+}
+
+header nav ul li a:hover {
+  background: #f1683a;
+  border-radius: 4px;
+}
+
+header nav ul li a i {
+  font-size: 18px;
+}

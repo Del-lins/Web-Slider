@@ -1,0 +1,144 @@
+.carousel .list .item:nth-child(1) {
+  z-index: 1;
+}
+
+.carousel .list .item:nth-child(1) .author,
+.carousel .list .item:nth-child(1) .title,
+.carousel .list .item:nth-child(1) .topic,
+.carousel .list .item:nth-child(1) .des,
+.carousel .list .item:nth-child(1) .button {
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: animeContent 0.5s 1s linear 1 forwards;
+}
+
+@keyframes animeContent {
+  to {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0px);
+  }
+}
+
+.carousel .list .item:nth-child(1) .title {
+  animation-delay: 1.2s !important;
+}
+
+.carousel .list .item:nth-child(1) .topic {
+  animation-delay: 1.4s !important;
+}
+
+.carousel .list .item:nth-child(1) .des {
+  animation-delay: 1.7s !important;
+}
+
+.carousel .list .item:nth-child(1) .button {
+  animation-delay: 1.8s !important;
+}
+
+.carousel.next .list .item:nth-child(1) img {
+  width: 150px;
+  height: 220px;
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  border-radius: 20px;
+  animation: animeImage 0.5s linear 1 forwards;
+}
+
+@keyframes animeImage {
+  to {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    border-radius: 0;
+  }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1) {
+  width: 0;
+  overflow: hidden;
+  animation: animeThumbail 0.5s linear 1 forwards;
+}
+
+@keyframes animeThumbail {
+  to {
+    width: 150px;
+    /* width: 0;
+    opacity: 0; */
+  }
+}
+
+.carousel.next .thumbnail {
+  transform: translateX(150px);
+  animation: animeTRansforThumbnail 0.5s linear 1 forwards;
+}
+
+@keyframes animeTRansforThumbnail {
+  to {
+    /* transform: translateX(150px); */
+    transform: translateX(0);
+  }
+}
+
+.carousel.prev .list .item:nth-child(2) {
+  z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(2) img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: animeOutImage 0.5s linear 1 forwards;
+}
+
+@keyframes animeOutImage {
+  to {
+    width: 150px;
+    height: 220px;
+    border-radius: 20px;
+    left: 50%;
+    bottom: 50px;
+  }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1) {
+  overflow: hidden;
+  opacity: 0;
+  animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .des,
+.carousel.prev .list .item:nth-child(2) .content .buttons {
+  animation: contentOut 1.5s linear 1 forwards;
+}
+
+@keyframes contentOut {
+  to {
+    transform: translateY(-150px);
+    filter: blur(20px);
+    opacity: 0;
+  }
+}
+
+.carousel.next .arrows button,
+.carousel.prev .arrows button {
+  pointer-events: none;
+}
+
+.carousel.next .time,
+.carousel.prev .time {
+  width: 100%;
+  animation: animeTimeRuning 2s linear 1 forwards;
+}
+
+@keyframes animeTimeRuning {
+  to {
+    width: 0;
+  }
+}
